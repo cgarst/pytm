@@ -1,5 +1,29 @@
 [
   {
+    "SID": "JP01",
+    "target": [
+      "Process"
+    ],
+    "description": "Insider Threat (Code Changes)",
+    "details": "If no procedure is in place to review code changes from the system developers, a backdoor or other malware could be inserted on the production system.",
+    "Likelihood Of Attack": "Medium",
+    "severity": "High",
+    "condition": "target.maxClassification is Classification.SENSITIVE",
+    "mitigations": "Code changes should undergo a review by the security team prior to entering production as part of SDLC."
+  },
+  {
+    "SID": "JP02",
+    "target": [
+      "Process"
+    ],
+    "description": "Fail-Open with Sensitive Security Systems",
+    "details": "Systems involved with the security of sensitive resources must fail ON to prevent loss through denial of service.",
+    "Likelihood Of Attack": "High",
+    "severity": "High",
+    "condition": "target.maxClassification is Classification.SENSITIVE",
+    "mitigations": "Ensure functionality is in place to fail closed."
+  },
+  {
     "SID": "INP01",
     "target": [
       "Lambda",
